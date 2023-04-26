@@ -112,15 +112,27 @@ class _HomePageState extends State<HomePage> {
             ),
             (selectcategory != null)
                 ? getProduct(
-                    category: selectcategory!, displayname: selectcategory!)
-                : getProduct(
-                    category: 'smartphones', displayname: 'SmartPhone'),
-            getProduct(category: 'laptops', displayname: 'Laptops'),
-            getProduct(category: 'fragrances', displayname: 'Fragrances'),
-            getProduct(category: 'skincare', displayname: 'Skin-Care'),
-            getProduct(category: 'groceries', displayname: 'Kariyanu'),
-            getProduct(
-                category: 'home-decoration', displayname: 'Ghar-Shangar'),
+                    category: selectcategory!,
+                    displayname: selectcategory!,
+                    min: rangeValues.start,
+                    max: rangeValues.end,
+                  )
+                : Column(
+                    children: [
+                      getProduct(
+                          category: 'smartphones', displayname: 'SmartPhone'),
+                      getProduct(category: 'laptops', displayname: 'Laptops'),
+                      getProduct(
+                          category: 'fragrances', displayname: 'Fragrances'),
+                      getProduct(
+                          category: 'skincare', displayname: 'Skin-Care'),
+                      getProduct(
+                          category: 'groceries', displayname: 'Kariyanu'),
+                      getProduct(
+                          category: 'home-decoration',
+                          displayname: 'Ghar-Shangar'),
+                    ],
+                  ),
           ],
         ),
       ),

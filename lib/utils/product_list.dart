@@ -1,3 +1,7 @@
+import '../Model/model.dart';
+
+List<Product> Addedproducts = [];
+
 List<String> Category = [
   'smartphones',
   'laptops',

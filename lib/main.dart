@@ -6,14 +6,14 @@ import 'Screens/home_page.dart';
 void main() {
   runApp(
     MaterialApp(
-      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.blue),
+      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.red),
       title: "Ecommerce App",
       debugShowCheckedModeBanner: false,
       initialRoute: 'home',
       routes: {
         ('home'): (context) => const HomePage(),
         ('detail'): (context) => const DetailPage(),
-        ('cart page'): (context) => const CartPage(),
+        ('cart'): (context) => const CartPage(),
       },
     ),
   );

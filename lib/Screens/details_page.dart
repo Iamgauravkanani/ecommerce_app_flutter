@@ -1,4 +1,5 @@
 import 'package:ecommerce_cf_9/Model/model.dart';
+import 'package:ecommerce_cf_9/utils/product_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +16,7 @@ class _DetailPageState extends State<DetailPage> {
     super.initState();
   }
 
+  @override
   Widget build(BuildContext context) {
     Product data = ModalRoute.of(context)!.settings.arguments as Product;
     return Scaffold(
@@ -38,10 +40,15 @@ class _DetailPageState extends State<DetailPage> {
           ),
         ],
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {},
-      //   child: const Icon(Icons.add_shopping_cart),
-      // ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          if (!Addedproducts.contains(data)) {
+            Addedproducts.add(data);
+          }
+          Navigator.of(context).pushNamed('cart');
+        },
+        child: const Icon(Icons.add_shopping_cart),
+      ),
       body: Stack(
         children: [
           Column(
