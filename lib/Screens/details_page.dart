@@ -12,11 +12,6 @@ class DetailPage extends StatefulWidget {
 
 class _DetailPageState extends State<DetailPage> {
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     Product data = ModalRoute.of(context)!.settings.arguments as Product;
     return Scaffold(
@@ -201,27 +196,6 @@ class _DetailPageState extends State<DetailPage> {
               ),
             ),
           )
-          // Column(children: [
-          //   SingleChildScrollView(
-          //     child: Row(
-          //         children: data.images
-          //             .map(
-          //               (e) => Container(
-          //                 height: MediaQuery.of(context).size.height * 0.6,
-          //                 width: MediaQuery.of(context).size.width,
-          //                 decoration: BoxDecoration(
-          //                   color: Colors.white,
-          //                   image: DecorationImage(
-          //                     image: NetworkImage(
-          //                       "https://cdn4.sharechat.com/img_541612_3a2ace2d_1672572538081_sc.jpg",
-          //                     ),
-          //                   ),
-          //                 ),
-          //               ),
-          //             )
-          //             .toList()),
-          //   )
-          // ]),
         ],
       ),
     );

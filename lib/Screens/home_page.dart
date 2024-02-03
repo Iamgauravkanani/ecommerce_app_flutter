@@ -15,12 +15,6 @@ class _HomePageState extends State<HomePage> {
   String? selectcategory;
   RangeValues rangeValues = const RangeValues(1, 2000);
   @override
-  //initstate
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
-
   @override
   //build
   Widget build(BuildContext context) {

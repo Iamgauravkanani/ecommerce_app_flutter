@@ -7,7 +7,6 @@ void main() {
   runApp(
     MaterialApp(
       theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.red),
-      title: "Ecommerce App",
       debugShowCheckedModeBanner: false,
       initialRoute: 'home',
       routes: {
